@@ -18,6 +18,8 @@ Windows / ComfyUI 下的 Image 与 MiniMax H3 文本编码器 CPU–GPU 配对�
 
 这里只测TE编码，H3还包含固定首帧视觉编码；**不是完整生图或5秒视频的生成时间**。CPU禁CUDA、使用FP32计算配置；GPU采用独立TE加载路径、禁用DynamicVRAM。Image短/长输出为24/1016个位置；H3为441个位置。
 
+![H3同机CPU与GPU编码时间，含显存配置和输出差异说明](assets/h3-cpu-gpu.png)
+
 ## 更重要的发现：给显存留空间，反而快了
 
 两张16GB卡的H3默认配置出现严重波动，追加组只改加载器参数 `--reserve-vram 3`，不改权重或输入。
@@ -28,6 +30,10 @@ Windows / ComfyUI 下的 Image 与 MiniMax H3 文本编码器 CPU–GPU 配对�
 | RTX 5080 Laptop | 7.432 / 58.316 / 62.629 / 62.080 | 8.430 / 2.748 / 2.734 / 2.755 |
 
 两机调整前后GPU输出分别逐元素相同。预留会让更多权重留在CPU内存、按需搬到GPU，腾出反量化、激活与临时缓冲空间；主要计算仍在GPU。3GiB是加载预算，不是驱动硬上限，也没有被证明是通用最优值。
+
+![两张16GB显卡默认和预留3GiB配置的四次完整编码曲线](assets/vram-headroom.png)
+
+![纯CPU前向与GPU计算加CPU卸载的区别](assets/cpu-vs-offload.png)
 
 这说明不能把历史约70秒GPU成绩当作普遍基准，也不能将“CPU只多约30秒”当作H3的固有特点。[机制与边界](docs/FINDINGS.md)
 
@@ -50,6 +56,8 @@ python -m unittest discover -s tests -v
 ```
 
 自己跑模型前，请先读[运行要求与完整命令](docs/REPRODUCE.md)。脚本不会安装依赖、下载权重、停止其他服务或改变防火墙。
+
+插图同时提供PNG和SVG。重新画图需要额外安装Matplotlib及中文字体，再运行 `python scripts/plot_results.py`；该脚本只读取已归档数据，不启动模型。普通结果分析不需要这些绘图依赖。
 
 ## 已知限制
 
