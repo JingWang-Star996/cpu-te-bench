@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-28",
+  "main_groups": 12,
+  "control_groups": 2,
+  "measured_forwards": 80,
+  "extra_profiler_forwards": 5,
+  "comfyui_head_observed_at_packaging": "8ff6dc384ba5c410266b40e137799e049459d4f2",
+  "comfyui_origin": "https://github.com/Comfy-Org/ComfyUI",
+  "scope": "The six source-file hashes in runs.json were recorded during testing. HEAD above was read at packaging; matching files were clean at that time. This is not a full dependency lock.",
+  "original_reference_redistributed": false,
+  "conditioning_arrays_redistributed": false,
+  "sanitization": "Whitelisted result fields only. Hostnames, PIDs, private filesystem paths, SSH configuration, service snapshots and credentials omitted. Numeric samples unchanged.",
+  "scripts_sha256": {
+    "scripts/bench.py": "c58e9fbfefe7b336f9820d4365c273e153dc5ee6c438fd6c721310a02940472d",
+    "archive/bench-main.py": "910dad07af884bdda834857da3704e66e590e857f54c221b5898d459d8b29a69"
+  }
+}

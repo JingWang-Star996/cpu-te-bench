@@ -1,0 +1,265 @@
+{
+  "cpu_gpu": [
+    {
+      "cpu": "12700H",
+      "profile": "image",
+      "case": "image_short",
+      "shape_cpu": [
+        1,
+        24,
+        4096
+      ],
+      "shape_gpu": [
+        1,
+        24,
+        4096
+      ],
+      "max_abs": 0.0093994140625,
+      "rmse": 6.116735823336072e-05,
+      "relative_rmse": 5.1352080119037705e-06,
+      "cosine": 0.9999999999868309,
+      "finite": true
+    },
+    {
+      "cpu": "12700H",
+      "profile": "image",
+      "case": "image_long",
+      "shape_cpu": [
+        1,
+        1016,
+        4096
+      ],
+      "shape_gpu": [
+        1,
+        1016,
+        4096
+      ],
+      "max_abs": 0.1307373046875,
+      "rmse": 0.000654403652252842,
+      "relative_rmse": 5.307907378639659e-05,
+      "cosine": 0.9999999985913068,
+      "finite": true
+    },
+    {
+      "cpu": "12700H",
+      "profile": "h3",
+      "case": "h3_first_frame",
+      "shape_cpu": [
+        1,
+        441,
+        5120
+      ],
+      "shape_gpu": [
+        1,
+        441,
+        5120
+      ],
+      "max_abs": 1396.900390625,
+      "rmse": 1.00357152559217,
+      "relative_rmse": 0.05202728467846979,
+      "cosine": 0.9993791303995544,
+      "finite": true
+    },
+    {
+      "cpu": "13900HX",
+      "profile": "image",
+      "case": "image_short",
+      "shape_cpu": [
+        1,
+        24,
+        4096
+      ],
+      "shape_gpu": [
+        1,
+        24,
+        4096
+      ],
+      "max_abs": 0.009918212890625,
+      "rmse": 5.8174526744309746e-05,
+      "relative_rmse": 4.883949877997419e-06,
+      "cosine": 0.9999999999881307,
+      "finite": true
+    },
+    {
+      "cpu": "13900HX",
+      "profile": "image",
+      "case": "image_long",
+      "shape_cpu": [
+        1,
+        1016,
+        4096
+      ],
+      "shape_gpu": [
+        1,
+        1016,
+        4096
+      ],
+      "max_abs": 0.13482666015625,
+      "rmse": 0.0006365069703374833,
+      "relative_rmse": 5.162750481002928e-05,
+      "cosine": 0.9999999986677633,
+      "finite": true
+    },
+    {
+      "cpu": "13900HX",
+      "profile": "h3",
+      "case": "h3_first_frame",
+      "shape_cpu": [
+        1,
+        441,
+        5120
+      ],
+      "shape_gpu": [
+        1,
+        441,
+        5120
+      ],
+      "max_abs": 1400.11328125,
+      "rmse": 1.0065573741060696,
+      "relative_rmse": 0.05218962387046176,
+      "cosine": 0.9993766896755126,
+      "finite": true
+    },
+    {
+      "cpu": "14900HX",
+      "profile": "image",
+      "case": "image_short",
+      "shape_cpu": [
+        1,
+        24,
+        4096
+      ],
+      "shape_gpu": [
+        1,
+        24,
+        4096
+      ],
+      "max_abs": 0.006561279296875,
+      "rmse": 4.677872000797069e-05,
+      "relative_rmse": 3.927232653552794e-06,
+      "cosine": 0.9999999999923166,
+      "finite": true
+    },
+    {
+      "cpu": "14900HX",
+      "profile": "image",
+      "case": "image_long",
+      "shape_cpu": [
+        1,
+        1016,
+        4096
+      ],
+      "shape_gpu": [
+        1,
+        1016,
+        4096
+      ],
+      "max_abs": 0.14208984375,
+      "rmse": 0.0007113957929811281,
+      "relative_rmse": 5.77017752810338e-05,
+      "cosine": 0.9999999983355391,
+      "finite": true
+    },
+    {
+      "cpu": "14900HX",
+      "profile": "h3",
+      "case": "h3_first_frame",
+      "shape_cpu": [
+        1,
+        441,
+        5120
+      ],
+      "shape_gpu": [
+        1,
+        441,
+        5120
+      ],
+      "max_abs": 1400.212890625,
+      "rmse": 1.0065910392904442,
+      "relative_rmse": 0.05219132903900823,
+      "cosine": 0.9993765742009715,
+      "finite": true
+    }
+  ],
+  "headroom": [
+    {
+      "cpu": "12700H",
+      "status": "success",
+      "values_s": [
+        9.851164500010782,
+        3.2352708999969764,
+        3.0867329000029713,
+        3.2109618999966187
+      ],
+      "median_s": 3.2109618999966187,
+      "placement": {
+        "patcher_class": "ModelPatcher",
+        "devices": [
+          "cpu",
+          "cuda:0"
+        ],
+        "types": {
+          "Parameter:torch.float32": 1,
+          "QuantizedTensor:torch.bfloat16": 351,
+          "Parameter:torch.bfloat16": 651,
+          "Tensor:torch.float32": 1
+        },
+        "load_device": "cuda:0",
+        "offload_device": "cpu",
+        "model_bytes": 15686911147,
+        "loaded_bytes": 10476274276,
+        "lowvram": true,
+        "offload_buffer_bytes": 745472177,
+        "linear_layouts": {
+          "TensorWiseINT8Layout:full_precision_mm=None": 1,
+          "TensorCoreNVFP4Layout:full_precision_mm=True": 350,
+          "None:full_precision_mm=None": 260,
+          "None:full_precision_mm=True": 116
+        }
+      },
+      "max_cuda_reserved_bytes": 14243856384,
+      "bit_equal_to_default": true,
+      "max_abs_diff_to_default": 0.0
+    },
+    {
+      "cpu": "13900HX",
+      "status": "success",
+      "values_s": [
+        8.43031090000295,
+        2.747810100001516,
+        2.7344224999978906,
+        2.754628099995898
+      ],
+      "median_s": 2.747810100001516,
+      "placement": {
+        "patcher_class": "ModelPatcher",
+        "devices": [
+          "cpu",
+          "cuda:0"
+        ],
+        "types": {
+          "Parameter:torch.float32": 1,
+          "QuantizedTensor:torch.bfloat16": 351,
+          "Parameter:torch.bfloat16": 651,
+          "Tensor:torch.float32": 1
+        },
+        "load_device": "cuda:0",
+        "offload_device": "cpu",
+        "model_bytes": 15686911147,
+        "loaded_bytes": 10114994594,
+        "lowvram": true,
+        "offload_buffer_bytes": 745472177,
+        "linear_layouts": {
+          "TensorWiseINT8Layout:full_precision_mm=None": 1,
+          "TensorCoreNVFP4Layout:full_precision_mm=True": 350,
+          "None:full_precision_mm=None": 260,
+          "None:full_precision_mm=True": 116
+        }
+      },
+      "max_cuda_reserved_bytes": 14103347200,
+      "bit_equal_to_default": true,
+      "max_abs_diff_to_default": 0.0
+    }
+  ],
+  "definition": "relative_rmse = RMS(CPU - GPU) / RMS(GPU); not a quality-equivalence threshold"
+}

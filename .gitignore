@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+/runs/
+*.safetensors
+*.npy
+*.log
+.env
+.venv/

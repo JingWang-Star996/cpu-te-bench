@@ -1,0 +1,3 @@
+* text=auto eol=lf
+scripts/bench.py -text
+archive/bench-main.py -text

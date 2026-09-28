@@ -1,0 +1,38 @@
+{
+  "12700H": {
+    "cpu": "12700H",
+    "gpu": "RTX 3080 Ti Laptop 16GB",
+    "ram_installed_gib": 40,
+    "ram_modules_gib": [
+      32,
+      8
+    ],
+    "ram_type": "DDR5",
+    "configured_mts": 4800,
+    "threads": 14
+  },
+  "13900HX": {
+    "cpu": "13900HX",
+    "gpu": "RTX 5080 Laptop 16GB",
+    "ram_installed_gib": 48,
+    "ram_modules_gib": [
+      32,
+      16
+    ],
+    "ram_type": "DDR5",
+    "configured_mts": 4800,
+    "threads": 24
+  },
+  "14900HX": {
+    "cpu": "14900HX",
+    "gpu": "RTX 5090 Laptop 24GB",
+    "ram_installed_gib": 48,
+    "ram_modules_gib": [
+      32,
+      16
+    ],
+    "ram_type": "DDR5",
+    "configured_mts": 4800,
+    "threads": 24
+  }
+}
